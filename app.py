@@ -239,7 +239,7 @@ kpis_base = calcular_kpis(df)
 st.title("Análise Climática do Brasil (2015–2024)")
 st.caption(
     "Aluno(a): Miguel Garcia Lopes do Amaral| "
-    "Professor: Alexandre Neves Louzada"
+    "Professor: Alexandre Neves Louzada| "
     "Disciplina: Linguagem de Programação | "
     "Turma: Quinta/noite"
 )
