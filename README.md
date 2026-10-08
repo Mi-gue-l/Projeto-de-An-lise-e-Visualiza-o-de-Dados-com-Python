@@ -10,7 +10,7 @@
 |---|---|
 | Repositório GitHub | https://github.com/Mi-gue-l/Projeto-de-An-lise-e-Visualiza-o-de-Dados-com-Python |
 | Página do projeto (GitHub Pages) | https://mi-gue-l.github.io/Projeto-de-An-lise-e-Visualiza-o-de-Dados-com-Python/ |
-| Dashboard (Streamlit Community Cloud) | https://projeto-de-an-lise-e-visualiza-o-de-dados-com-python-csmtmsyuf.streamlit.app/ |
+| Dashboard (Streamlit Community Cloud) | https://projeto-de-an-lise-e-visualiza-o-de-dados-com-python-5cjbd7z2n.streamlit.app/ |
 
 ## Descrição
 
