@@ -3,7 +3,7 @@
 **Aluno(a):** Miguel Garcia Lopes do Amaral
 **Disciplina:** Linguagem de Programação  
 **Turma:** Quinta/noite
-**Professor: Alexandre Neves Louzada
+**Professor:** Alexandre Neves Louzada
 
 ## Links do projeto
 
