@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise Climática do Brasil</title>
+<style>
+:root {
+  --fundo: #f5f7fa;
+  --cartao: #ffffff;
+  --texto: #1f2933;
+  --suave: #52606d;
+  --destaque: #0b6bcb;
+  --borda: #d9e2ec;
+  --cabecalho: #0b3c6f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.65;
+}
+header {
+  background: linear-gradient(135deg, var(--cabecalho), #1b78d0);
+  color: #ffffff;
+  padding: 56px 20px;
+  text-align: center;
+}
+header h1 { margin: 0 0 10px; font-size: 2.2rem; }
+header p { margin: 4px 0; font-size: 1.05rem; opacity: 0.95; }
+main { max-width: 1000px; margin: 0 auto; padding: 24px 20px 60px; }
+section {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 22px 0;
+}
+h2 { margin-top: 0; color: var(--cabecalho); }
+ul { padding-left: 22px; }
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+.kpi {
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: #f8fbff;
+}
+.kpi strong { display: block; font-size: 1.6rem; color: var(--destaque); }
+.kpi span { color: var(--suave); font-size: 0.92rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+.tags li {
+  background: #e6f0fb;
+  color: var(--cabecalho);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+a.botao {
+  display: inline-block;
+  background: var(--destaque);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+a.botao:hover { background: var(--cabecalho); }
+a.botao.secundario { background: #ffffff; color: var(--destaque); border: 2px solid var(--destaque); }
+figure { margin: 22px 0; text-align: center; }
+figure img { max-width: 100%; height: auto; border: 1px solid var(--borda); border-radius: 8px; }
+figcaption { color: var(--suave); font-size: 0.92rem; margin-top: 8px; }
+pre {
+  background: #102a43;
+  color: #e6f0fb;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+.aviso {
+  background: #fff8e1;
+  border-left: 5px solid #f4b400;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+footer { text-align: center; color: var(--suave); padding: 20px; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Análise Climática do Brasil (2015–2024)</h1>
+  <p>Projeto de análise e visualização de dados com Python, Pandas, Seaborn, SQLAlchemy e Streamlit</p>
+  <p>Aluno(a): Miguel Garcia | Disciplina: Linguagem de Programação | Turma: Quinta/noite</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Sobre o projeto</h2>
+  <p>Este projeto analisa uma base simulada de registros climáticos mensais de 37 cidades brasileiras, distribuídas por 20 unidades federativas, entre janeiro de 2015 e dezembro de 2024. A análise considera temperatura, chuva, umidade, velocidade do vento, eventos extremos e nível de alerta.</p>
+  <p>A proposta é demonstrar um fluxo completo de projeto analítico: tratamento dos dados, análise exploratória, criação de indicadores, visualizações, dashboard interativo e publicação em ambiente web.</p>
+  <p class="aviso"><strong>Atenção:</strong> a base de dados é simulada. Os resultados demonstram o método de análise e não representam o clima real do Brasil.</p>
+</section>
+
+<section>
+  <h2>Perguntas de análise</h2>
+  <ul>
+    <li>Como estão distribuídas as variáveis climáticas e os níveis de alerta?</li>
+    <li>Existe tendência ou sazonalidade ao longo dos anos e dos meses?</li>
+    <li>Quais regiões, estados e cidades se destacam em temperatura, chuva e eventos extremos?</li>
+    <li>Onde estão localizadas as cidades com maiores valores de cada indicador?</li>
+    <li>Quais variáveis se relacionam entre si?</li>
+    <li>O nível de alerta pode ser explicado pelas variáveis climáticas?</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Indicadores analisados</h2>
+  <div class="kpis">
+    <div class="kpi"><strong>25,0 °C</strong><span>Temperatura média</span></div>
+    <div class="kpi"><strong>105,9 mm</strong><span>Chuva média mensal</span></div>
+    <div class="kpi"><strong>66,4 %</strong><span>Umidade média</span></div>
+    <div class="kpi"><strong>10,5 °C</strong><span>Amplitude térmica média</span></div>
+    <div class="kpi"><strong>8.918</strong><span>Eventos extremos (total)</span></div>
+    <div class="kpi"><strong>2,01</strong><span>Eventos por cidade/mês</span></div>
+    <div class="kpi"><strong>48,7 %</strong><span>Alertas Alto ou Crítico</span></div>
+    <div class="kpi"><strong>4.440</strong><span>Registros analisados</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Principais visualizações</h2>
+
+  <figure>
+    <img src="imagens/serie_temporal.png" alt="Série temporal da temperatura média com média móvel e tendência linear">
+    <figcaption>Temperatura média nacional: a tendência linear é de apenas +0,023 °C por ano.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="imagens/heatmap_ano_mes.png" alt="Mapa de calor da temperatura média por ano e mês">
+    <figcaption>Temperatura média por ano e mês: não há sazonalidade marcante na base.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="imagens/comparativos.png" alt="Eventos extremos por UF e composição dos níveis de alerta por região">
+    <figcaption>Eventos extremos por UF e composição dos níveis de alerta por região.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="imagens/correlacao.png" alt="Matriz de correlação entre as variáveis climáticas">
+    <figcaption>Somente as temperaturas se correlacionam fortemente entre si; as demais variáveis têm correlação desprezível.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="imagens/mapa_cidades.png" alt="Localização das cidades com temperatura média e eventos extremos">
+    <figcaption>Cidades da base: cor representa a temperatura média e tamanho representa os eventos extremos.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Conclusão</h2>
+  <p>A base apresenta temperatura média de 24,99 °C, chuva média mensal de 105,9 mm e 48,7 % dos registros em alerta Alto ou Crítico. As diferenças entre regiões, anos e meses são pequenas, e o nível de alerta não é explicado pelas variáveis climáticas, comportamento típico de dados simulados.</p>
+  <p>Para uma análise aplicada, o ideal é substituir a base por dados observados e definir um critério explícito para o nível de alerta.</p>
+</section>
+
+<section>
+  <h2>Tecnologias utilizadas</h2>
+  <ul class="tags">
+    <li>Python</li>
+    <li>Pandas</li>
+    <li>NumPy</li>
+    <li>Matplotlib</li>
+    <li>Seaborn</li>
+    <li>Plotly</li>
+    <li>Streamlit</li>
+    <li>SQLAlchemy</li>
+    <li>SQLite</li>
+    <li>GitHub</li>
+    <li>GitHub Pages</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Estrutura do projeto</h2>
+<pre>projeto-clima-brasil/
+  ├── app.py
+  ├── requirements.txt
+  ├── README.md
+  ├── index.html
+  ├── dados/
+  ├── database/
+  ├── notebooks/
+  └── imagens/</pre>
+</section>
+
+<section>
+  <h2>Arquivos do projeto</h2>
+  <div class="botoes">
+    <a class="botao secundario" href="README.md">Ver README</a>
+    <a class="botao secundario" href="notebooks/analise_clima_brasil.ipynb">Ver Notebook</a>
+    <a class="botao secundario" href="dados/simulacao_clima_brasil.csv">Baixar Base de Dados</a>
+    <a class="botao secundario" href="https://github.com/Mi-gue-l/Projeto-de-An-lise-e-Visualiza-o-de-Dados-com-Python">Repositório no GitHub</a>
+  </div>
+</section>
+
+<section>
+  <h2>Dashboard interativo</h2>
+  <p>O dashboard foi desenvolvido com Streamlit e permite explorar os dados por meio de filtros múltiplos, KPIs dinâmicos, gráficos interativos, análise temporal, mapa interativo e correlações.</p>
+  <div class="botoes">
+    <a class="botao" href="https://projeto-de-an-lise-e-visualiza-o-de-dados-com-python-csmtmsyuf.streamlit.app/">Acessar Dashboard Streamlit</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Projeto desenvolvido para fins educacionais — Análise e Visualização de Dados com Python
+</footer>
+
+</body>
+</html>

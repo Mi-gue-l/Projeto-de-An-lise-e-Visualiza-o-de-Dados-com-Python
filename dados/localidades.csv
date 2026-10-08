@@ -1,0 +1,38 @@
+cidade,uf,regiao,latitude,longitude
+Brasília,DF,Centro-Oeste,-15.794,-47.882
+Aparecida de Goiânia,GO,Centro-Oeste,-16.823,-49.247
+Goiânia,GO,Centro-Oeste,-16.686,-49.264
+Campo Grande,MS,Centro-Oeste,-20.469,-54.62
+Cuiabá,MT,Centro-Oeste,-15.601,-56.097
+Feira de Santana,BA,Nordeste,-12.267,-38.967
+Salvador,BA,Nordeste,-12.971,-38.501
+Fortaleza,CE,Nordeste,-3.732,-38.527
+Juazeiro do Norte,CE,Nordeste,-7.213,-39.315
+São Luís,MA,Nordeste,-2.53,-44.303
+João Pessoa,PB,Nordeste,-7.119,-34.845
+Jaboatão dos Guararapes,PE,Nordeste,-8.113,-35.015
+Recife,PE,Nordeste,-8.047,-34.877
+Manaus,AM,Norte,-3.119,-60.022
+Belém,PA,Norte,-1.456,-48.502
+Santarém,PA,Norte,-2.443,-54.708
+Porto Velho,RO,Norte,-8.761,-63.9
+Palmas,TO,Norte,-10.184,-48.333
+Serra,ES,Sudeste,-20.121,-40.307
+Vila Velha,ES,Sudeste,-20.329,-40.292
+Vitória,ES,Sudeste,-20.315,-40.313
+Belo Horizonte,MG,Sudeste,-19.917,-43.935
+Juiz de Fora,MG,Sudeste,-21.761,-43.35
+Uberlândia,MG,Sudeste,-18.919,-48.277
+Niterói,RJ,Sudeste,-22.883,-43.104
+Nova Iguaçu,RJ,Sudeste,-22.759,-43.451
+Petrópolis,RJ,Sudeste,-22.505,-43.179
+Rio de Janeiro,RJ,Sudeste,-22.907,-43.173
+Campinas,SP,Sudeste,-22.906,-47.061
+Ribeirão Preto,SP,Sudeste,-21.177,-47.81
+São Paulo,SP,Sudeste,-23.55,-46.633
+Curitiba,PR,Sul,-25.428,-49.273
+Londrina,PR,Sul,-23.31,-51.162
+Caxias do Sul,RS,Sul,-29.168,-51.179
+Porto Alegre,RS,Sul,-30.035,-51.218
+Florianópolis,SC,Sul,-27.595,-48.548
+Joinville,SC,Sul,-26.304,-48.846
