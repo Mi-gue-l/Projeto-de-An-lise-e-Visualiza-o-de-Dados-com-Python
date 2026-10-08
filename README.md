@@ -1,8 +1,9 @@
 # Análise Climática do Brasil (2015–2024)
 
-**Aluno(a):** Miguel Garcia  
+**Aluno(a):** Miguel Garcia Lopes do Amaral
 **Disciplina:** Linguagem de Programação  
 **Turma:** Quinta/noite
+**Professor: Alexandre Neves Louzada
 
 ## Links do projeto
 
